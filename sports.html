@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
+    <style>
+       
+      
+       #box{
+           display: grid; 
+          grid-template-columns: repeat(4,1fr);
+          gap : 40px;
+          margin-left: 40px;
+          width: 60%;
+        }
+       .innerdiv{
+         display: flex;
+         justify-content: space-around;
+         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+       }
+      #box> div{
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+       }
+       h4{
+         text-align: center;
+       }
+       img{
+         height: 280px;
+       }
+       button{
+         margin-left: 50px;
+         border: none;
+         height: 40px;
+         margin-top: 5px;
+         background-color: green;
+    
+       }
+       button:hover{
+         background-color: gray;
+       }
+       s{
+         margin-top: 16px;
+       }
+       a{
+            text-decoration: none;
+            color: white;
+        }
+       
+        h1{
+          text-align: center;
+        }
+        #main{
+            height: auto;
+            width: 95%;
+            border: 1px solid;
+            margin: auto;
+        }
+        #black{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content:flex-end ;
+            gap: 20px; 
+            text-decoration: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+      
+
+        
+        #searchbar{
+            height: 90px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid green;
+            display: grid;
+           display: flex;
+          justify-content: space-evenly;
+        }
+        #name{
+            width: 100%;
+        }
+        #sportsjam{
+          height: 100%;
+          width: 60%;
+        }
+        #search{
+            height: 40px;
+            width: 40%;
+            margin-top: 20px;
+            border: 1px solid;
+        
+        }
+        #searchicon{
+          height: 25px;
+          width: 30px;
+        }
+        #search{
+            display: flex;
+            justify-content: space-between;
+        }
+        #searchbar>div{
+            display: flex;
+        }
+        #shop{
+            font-weight:100px;
+            margin-top: 30px;
+        }
+        #carticon{
+            height: 100%;
+            width: 70px;
+        }
+        #navbar{
+            height: 60px;
+            width: 100%;
+            border: 1px solid blue;
+            background-color: white;
+            display: flex;
+            gap:5px;
+            
+            justify-content: left;
+            /* box-sizing: border-box; */
+            
+        }
+        
+        
+        #navbar>a{
+            margin: 10px 0px 20px 20px;
+              height: 40px;
+              display: block;
+            font-weight: bold;
+               padding: 10px;
+               color: black;
+             /* border: 1px solid;  */
+             box-sizing: border-box; 
+             
+        
+        } 
+        #navbar>a:hover
+        {
+            background-color: black;
+            color: white;
+        }
+      </style>
+</head>
+<body>
+  <div id="main" >
+    <div id="black">
+        
+       <div><a href="callus.html"><i class="fas fa-phone-alt"></i>Call Us:+91 80542-32640</a> </div>
+        <div><a href="login.html"><i class="fas fa-sign-in-alt"></i> Sign in</a></div>
+        <div><a href="Signup.html"><i class="fas fa-user-alt"> </i>Account </a></div>
+        <div> <a href="wishlist.html"><i class="far fa-heart"> </i> Wishlist</a></div>
+    </div>
+  
+
+    <div id="searchbar">
+      <a href="home.html"> <img  id="sportsjam" src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg"/> </a>
+        <div id="search">
+            <!-- <p>Search</p> -->
+            <input id="name" type="text" placeholder="Search" />
+            <img  id = "searchicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVL5LpZubYYlMaVOhFPC_n67RXt0Qvu0JrLQ&usqp=CAU"> 
+        </div>
+        <div>
+      <a href="cart.html"> <img id="carticon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRay0SfdAYA00zHxcHegaJME8l_83R5k1u4vQ&usqp=CAU"></a>
+       
+      <h3 id="shop">Shopping Cart</h3>
+    </div>
+    </div>
+    <div id="navbar">
+        <a href="sports.html">SPORTS</a>
+        <a href="fitness.html" id="fitnes_goods">FITNESS</a>
+        <a href="shoes.html" id="for_skin">SHOES</a>
+        <a href="product.html">CLOTHING</a>
+        <a href="product.html" id="kits&combos">ACCESSORIES</a>
+        <a href="product.html">LEISURE SPORTS</a>
+        <a href="product.html">FANGEAR</a>
+        <a href="product.html">BRANDS</a>
+
+    </div>
+  </div>
+   
+      <button id="btn"><a href="cart.html">Go to Cart</a></button>
+      <select id="sort" onchange="sortit()">
+        <option>Sort by</option>
+        <option value="htl">High to low</option>
+        <option value="lth">Low to high</option>
+      </select>
+      <h1>SPORTS</h1>
+       <div id="box"></div> 
+      
+     
+      
+</body>
+</html>
+
+    
+ <script>
+
+  var mensData = [
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NKBB0635-492.jpg",
+      name: "Spalding NBA Alley Oop Basketball (Black, Size 7)",
+      strikedoffprice: 1049,
+      price: 1170,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83510Z.jpg",
+      name: "Spalding Los Angeles Lakers Baketball (Purple/Yellow, Size 7) ",
+      strikedoffprice: 999,
+      price: 699,
+      off: 20,
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83347Z.jpg",
+      name: " Spalding NBA Alley Oop Basketball (Black, Size 7)",
+      price: 945,
+      strikedoffprice: 2099,
+      off: "20% OFF",
+    },
+    
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB74532Z.jpg",
+      name: "MEN'S REEBOK RUNNING TEMPO SHOES ",
+      price: 1620,
+      strikedoffprice: 3599,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83648Z.jpg",
+      name: "Spalding NBA Trend Series Digital Basketball (Blue/Orange, Size7) ",
+      price: 1620,
+      strikedoffprice: 3599,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83347Z.jpg",
+      name: "Spalding James Harden Basketball (Red/Light Grey, Size 7) ",
+      price: 1440,
+      strikedoffprice: 3199,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/KBGHST100.jpg",
+      name: " MEN'S TRAINING WORKOUT READY ELITAGE PANTS ",
+      price: 1999,
+      strikedoffprice: 3199,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXZFRCIIBK.jpg ",
+      name: "Kookaburra Ghost 100 English Willow Cricket Bat ",
+      price: 769,
+      strikedoffprice: 1099,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SSMAGNUMPRO.jpg",
+      name: "SS Magnum Pro English Willow Cricket Bat",
+      price: 1170,
+      strikedoffprice: 2599,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNAST100ZZKRNI.jpg",
+      name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
+      price: 699,
+      strikedoffprice: 999,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNARC11PLAY.jpg",
+      name: " MEN'S REEBOK RUNNING AUSTIN SHOES",
+      price: 945,
+      strikedoffprice: 2099,
+      off: "20% OFF",
+    },
+   
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXZFRCIIBK.jpg",
+      name: "MEN'S REEBOK RUNNING TEMPO SHOES ",
+      price: 1620,
+      strikedoffprice: 3599,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXZFRCIIBK.jpg",
+      name: "MEN'S REEBOK RUNNING TEMPO SHOES ",
+      price: 1620,
+      strikedoffprice: 3599,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXZFRCIIBK.jpg",
+      name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXZFRCIIBK.jpg",
+      name: " MEN'S TRAINING WORKOUT READY ELITAGE PANTS ",
+      price: 1999,
+      strikedoffprice: 3199,
+      off: "20% OFF",
+    },
+    {
+      image_url:
+        "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXZFRCIIBK.jpg ",
+      name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+      price: 769,
+      strikedoffprice: 1099,
+      off: "20% OFF",
+    },
+    
+]
+
+// document.querySelector("#sort").addEventListener("change",sortit)
+
+window.addEventListener("load", function () {
+      display(mensData);
+    });
+
+
+     function sortit() {
+      var selected = document.querySelector("#sort").value;
+     // console.log(selected);
+      
+       if (selected == "htl") {
+        mensData.sort(function (a, b) {
+          return b.price - a.price;
+        });
+        document.querySelector("#box").innerHTML = null;
+         display(mensData);
+       
+      }
+      if (selected == "lth") {
+        mensData.sort(function (a, b) {
+          return a.price - b.price;
+        });
+        document.querySelector("#box").innerHTML=null;
+         display(mensData)
+        
+      }
+    }
+
+    function display(mensData)
+    {
+
+      var cartdata = JSON.parse(localStorage.getItem("cart"))||[] 
+    mensData.map(function(elem)
+  {
+  var cont = document.createElement("div")
+
+  var image = document.createElement("img")
+    image.src = elem.image_url
+
+    var h4tag  = document.createElement("h4")
+    h4tag.innerText= elem.name
+   
+    var pricediv = document.createElement("div")
+    
+    pricediv.setAttribute("class","innerdiv")
+    
+    var strike = document.createElement("s")
+     strike.innerText = elem.strikedoffprice
+    
+    var ptag = document.createElement("p")
+    ptag.innerText = elem.price
+
+    var offprice = document.createElement("p")
+    offprice.innerText = elem.off
+
+     var btn = document.createElement("button")
+     btn.innerText = "Add To Cart"
+     
+     btn.addEventListener("click",function()
+     {
+       addtocart(elem)
+     })
+     pricediv.append(strike,ptag,offprice,btn)
+     cont.append(image,h4tag,pricediv)
+    
+    document.querySelector("#box").append(cont)
+});
+   
+function addtocart(elem)
+    {
+      //console.log(elem)
+      cartdata.push(elem)
+      localStorage.setItem("cart",JSON.stringify(cartdata))
+      alert("item added to cart")
+    }
+  
+  }
+
+    
+  
+
+
+  
+</script> -->

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
+    
+    <style>
+         #box{
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          gap : 20px;
+        }
+        #main{
+            height: auto;
+            width: 95%;
+            border: 1px solid;
+            margin: auto;
+        }
+        #black{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content:flex-end ;
+            gap: 20px; 
+            text-decoration: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+      
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #searchbar{
+            height: 90px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid green;
+            display: grid;
+           display: flex;
+          justify-content: space-evenly;
+        }
+        #name{
+            width: 100%;
+        }
+        #search{
+            height: 40px;
+            width: 40%;
+            margin-top: 20px;
+            border: 1px solid;
+        
+        }
+        #search{
+            display: flex;
+            justify-content: space-between;
+        }
+        #searchbar>div{
+            display: flex;
+        }
+        #shop{
+            font-weight:100px;
+            margin-top: 30px;
+        }
+        #carticon{
+            height: 100%;
+            width: 70px;
+        }
+        #navbar{
+            height: 60px;
+            width: 100%;
+            border: 1px solid blue;
+            background-color: white;
+            display: flex;
+            gap:20px;
+            justify-content: left;
+            /* box-sizing: border-box; */
+            
+        }
+        #navbar>div{
+            margin: 10px 0px 20px 20px;
+              height: 40px;
+            font-weight: bold;
+               padding: 10px;
+             /* border: 1px solid;  */
+            box-sizing: border-box;
+        
+        }
+        #navbar>div:hover
+        {
+            background-color: black;
+            color: white;
+        }
+        h1{
+         text-align: center;
+        }
+        button{
+            display: block;
+            margin: auto; 
+            /* justify-content: center;
+            align-items: center; */
+            /* margin-left: 40px; */
+            padding: 10px;
+            background-color: green;
+            font-weight: bold;
+           /* color: black; */
+        }
+        #btn:hover{
+            background-color: blue;
+             /* color: white; */
+        }
+        h4,p{
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="main" >
+    <div id="black">
+            
+        <div><a href="callus.html"><i class="fas fa-phone-alt"></i>Call Us:+91 80542-32640</a> </div>
+         <div><a href="login.html"><i class="fas fa-sign-in-alt"></i> Sign in</a></div>
+         <div><a href="Signup.html"><i class="fas fa-user-alt"> </i>Account </a></div>
+         <div> <a href="wishlist.html"><i class="far fa-heart"> </i> Wishlist</a></div>
+     </div>
+   
+ 
+     <div id="searchbar">
+        <a href="home.html">  <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg"/> </a>
+         <div id="search">
+             <!-- <p>Search</p> -->
+             <input id="name" type="text" placeholder="Search" />
+             <img  id = "searchicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVL5LpZubYYlMaVOhFPC_n67RXt0Qvu0JrLQ&usqp=CAU">
+         </div>
+         <div>
+       <a href="cart.html"> <img id="carticon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRay0SfdAYA00zHxcHegaJME8l_83R5k1u4vQ&usqp=CAU"></a>
+        
+       <h3 id="shop">Shopping Cart</h3>
+      
+    </div>
+     </div>
+     <div id="navbar">
+         <div>SPORTS</div>
+         <div>FITNESS</div>
+         <div>SHOES</div>
+         <div>CLOTHING</div>
+         <div>ACCESSORIES</div>
+         <div>LEISURE SPORTS </div>
+         <div>FANGEAR</div>
+         <div>BRANDS</div>
+     </div>
+     <button id="btn"><a href="payment.html">Place Order</a></button>
+    </div>
+   
+    <h1></h1>
+    <div id="box"></div>
+</body>
+</html>
+<script>
+    var cartdata = JSON.parse(localStorage.getItem("cart"))
+   
+    console.log(cartdata)
+   //var cartdata = JSON.parse(localStorage.getItem("cart"))||[]
+   var length = cartdata.length
+
+   var total = cartdata.reduce(function(sum,elem,index,arr)
+   {
+       return sum+Number(elem.price) 
+   },0)
+   //console.log(total)
+  // document.querySelector("p").innerText=total
+  var total = cartdata.reduce(function(sum,elem,index,arr)
+   {
+       return sum+elem.price
+   },0)
+  
+   document.querySelector("h1").innerText= "Cart Total" +" "+ total +" "+ "And You have" +" "+ length+" "+ "items" 
+
+   cartdata.map(function(elem,index)
+  {
+  var cont = document.createElement("div")
+
+  var image = document.createElement("img")
+    image.src = elem.image_url
+
+    var h4tag  = document.createElement("h4")
+    h4tag.innerText= elem.name
+  
+    var ptag = document.createElement("p")
+    ptag.innerText = elem.price
+
+     var btn2 = document.createElement("button")
+    btn2.innerText = "Remove"
+    btn2.addEventListener("click",function(){
+        removeitem(elem,index)
+    })
+    
+    cont.append(image,h4tag,ptag,btn2)
+   
+document.querySelector("#box").append(cont)
+})
+document.querySelector("#btn").addEventListener("click", orderplaced)
+function orderplaced()
+{
+alert("order placed")
+}
+function removeitem(elem,index)
+{
+    //console.log(elem,index)
+    cartdata.splice(index,1)
+    //console.log(cartdata)
+    localStorage.setItem("cart",JSON.stringify(cartdata))
+    window.location.reload();
+}
+
+
+  
+    
+</script>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
+    
+     <style>
+        #main{
+            height: auto;
+            width: 95%;
+            border: 1px solid;
+            margin: auto;
+        }
+        #black{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content:flex-end ;
+            gap: 20px; 
+            text-decoration: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+      
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #searchbar{
+            height: 90px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid green;
+            display: grid;
+           display: flex;
+          justify-content: space-evenly;
+        }
+        #name{
+            width: 100%;
+         
+        }
+        #search{
+            height: 40px;
+            width: 40%;
+            margin-top: 20px;
+            /* border: 1px solid; */
+        
+        }
+        #search{
+            display: flex;
+            justify-content: space-between;
+        }
+        #searchbar>div{
+            display: flex;
+        }
+        #shop{
+            font-weight:100px;
+            margin-top: 30px;
+        }
+        #carticon{
+            height: 100%;
+            width: 70px;
+        }
+        #navbar{
+            height: 60px;
+            width: 100%;
+            border: 1px solid blue;
+            background-color: white;
+            display: flex;
+            gap:20px;
+            justify-content: left;
+            /* box-sizing: border-box; */
+            
+        }
+        #navbar>div{
+            margin: 10px 0px 20px 20px;
+              height: 40px;
+            font-weight: bold;
+               padding: 10px;
+             /* border: 1px solid;  */
+            box-sizing: border-box;
+        
+        }
+        #navbar>div:hover
+        {
+            background-color: black;
+            color: white;
+        }
+          div {
+      display: flex;
+      justify-content: space-around;
+    }
+    form {
+      margin: 0 auto;
+      margin-top: 100px;
+      width: 30%;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 30px;
+     }
+
+    label {
+      font-size: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      }  
+
+    input[type="submit"] {
+      background-color: blue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+     }
+     h1{
+       text-align: center;
+     }  
+     </style>
+  </head>
+  <body>
+    <div id="black">
+            
+      <div><a href="callus.html"><i class="fas fa-phone-alt"></i>Call Us:+91 80542-32640</a> </div>
+       <div><a href="login.html"><i class="fas fa-sign-in-alt"></i> Sign in</a></div>
+       <div><a href="Signup.html"><i class="fas fa-user-alt"> </i>Account </a></div>
+       <div> <a href="wishlist.html"><i class="far fa-heart"> </i> Wishlist</a></div>
+   </div>
+ 
+
+   <div id="searchbar">
+    <a href="home.html">  <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg"/> </a>
+       <div id="search">
+           <!-- <p>Search</p> -->
+           <input id="name" type="text" placeholder="Search" />
+           <img  id = "searchicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVL5LpZubYYlMaVOhFPC_n67RXt0Qvu0JrLQ&usqp=CAU">
+       </div>
+       <div>
+     <a href="cart.html"> <img id="carticon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRay0SfdAYA00zHxcHegaJME8l_83R5k1u4vQ&usqp=CAU"></a>
+      
+     <h3 id="shop">Shopping Cart</h3>
+   </div>
+   </div>
+   <div id="navbar">
+       <div>SPORTS</div>
+       <div>FITNESS</div>
+       <div>SHOES</div>
+       <div>CLOTHING</div>
+       <div>ACCESSORIES</div>
+       <div>LEISURE SPORTS </div>
+       <div>FANGEAR</div>
+       <div>BRANDS</div>
+   </div>
+  
+    <div>
+      <form id="form">
+        <h1>Sign In</h1>
+        <label for="">Enter Email </label><br />
+        <input id="email" type="text" placeholder="Enter Email or Mobile" /><br />
+        <label for="">Enter Password </label><br />
+        <input id="pass" type="password" placeholder="Enter Password" /><br />
+
+        <input id="sub" type="submit" />
+        <div id="sinup"><a href="Signup.html">Click here to SIGN UP</a></div>
+      </form>
+      
+    </div>
+  </body>
+</html>
+
+<script>
+  var reguser = JSON.parse(localStorage.getItem("signupData"));
+  document.querySelector("#form").addEventListener("submit",formSubmission)
+
+// var form = document.querySelector("#form");
+
+function formSubmission(event){
+  event.preventDefault();
+  var Email = document.querySelector("#email").value 
+  var password = document.querySelector("#pass").value;
+
+  var flag = false;
+  for(var i=0; i<reguser.length; i++)
+  {
+    if(reguser[i].Email===Email && reguser[i].password===password)
+    {
+      flag = true;
+    }
+  }
+  if(flag===false)
+  {
+    alert("Wrong Credentials")
+  }
+  if(flag===true)
+  {
+    document.querySelector("#sub").addEventListener("click",loginsuccess)
+    function loginsuccess(event){
+      event.preventDefault();
+      alert("welcome to Sportsjam")
+      window.location.href = "home.html"
+    }
+  
+  }
+}
+</script>
